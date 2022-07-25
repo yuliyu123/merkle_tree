@@ -23,7 +23,7 @@ impl MerkleTree {
         }
     }
 
-    pub fn get_root(&self) -> [u8; 32] {
+    pub fn merkle_root(&self) -> [u8; 32] {
         return self.layers[0][0];
     }
 
