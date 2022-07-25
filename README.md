@@ -5,6 +5,7 @@ Merkle tree implemention in Rust.
 public function:
 
 * `MerkleTree::new` : Construct a merkle tree.
+* `MerkleTree::merkle_root` : Get merkle root.
 * `MerkleTree::merkle_proof` : Generate merkle proof for the given item.
 * `MerkleTree::verify_proof` : Verify the given proof is true or not.
   
