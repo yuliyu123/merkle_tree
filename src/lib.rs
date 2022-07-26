@@ -53,7 +53,12 @@ impl MerkleTree {
             // Internal index represents the index in the current layer
             let internal_index = current_index - MerkleTree::get_tree_nodes(layer_index);
             let sibling = if internal_index % 2 == 0 {
-                layer[internal_index + 1]
+                // Point to last element in the layer, the sibling is itself.
+                if internal_index == layer.len() - 1 {
+                    layer[internal_index]
+                } else {
+                    layer[internal_index + 1]
+                }
             } else {
                 layer[internal_index - 1]
             };
